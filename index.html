@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPREAD ONE</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  </head>
+  <body class="relative">
+    <section id="mainvisual">
+      <div class="relative">
+        <div class="w-screen h-screen z-1">
+          <video class="w-full h-full object-cover" autoplay loop muted>
+            <source src="./assets/video/main.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div
+          id="next"
+          class="flex items-center justify-center flex-col absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hiragino-w3 text-2xl md:text-5xl font-semibold text-white cursor-pointer"
+        >
+          <img src="./assets/img/logo.svg" alt class="w-1/3 h-auto" />SPREAD ONE
+        </div>
+        <div
+          id="scroll"
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 rotate-45 border-b-2 border-r-2 border-white w-6 h-6 cursor-pointer"
+        ></div>
+      </div>
+    </section>
+    <div class="block" id="wrapper">
+      <header
+        id="header"
+        class="fixed top-0 left-0 w-screen bg-transparent z-[999]"
+      >
+        <div class="container mx-auto p-6">
+          <div id="navbar" class="flex justify-between items-center">
+            <div>
+              <a href="./index.html" class="flex items-center space-x-2">
+                <img src="./assets/img/logo.svg" alt="SPREAD ONE logo" />
+                <img src="./assets/img/logo_01.svg" alt class />
+              </a>
+            </div>
+            <ul
+              id="nav"
+              class="hidden md:inline-flex space-x-12 items-center text-gray-800"
+            >
+              <li>
+                <a
+                  class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                  href="#"
+                  >自社サービス</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                  href="#"
+                  >受託開発</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                  href="#"
+                  >会社情報</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                  href="#"
+                  >プレスリリース</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                  href="#"
+                  >採用情報</a
+                >
+              </li>
+              <li class="hidden md:block">
+                <a
+                  class="flex px-8 py-3 items-center gap-10 rounded-lg bg-yellow-200 text-gray-800 text-center hiragino-w3 font-light text-base leading-6"
+                  href="#"
+                  >お問合せ</a
+                >
+              </li>
+            </ul>
+            <div id="menu" class="block md:hidden">
+              <button class="focus:outline-none" id="open">
+                <i
+                  class="fas fa-bars text-gray-800 text-xl items-center flex-shrink-0 fill-current"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <div id="mobile" class="hidden z-999">
+            <div
+              class="absolute container mx-auto top-0 left-0 right-0 w-full h-screen p-6"
+            >
+              <div class="flex w-full justify-between items-center">
+                <a href="./index.html" class="flex items-center space-x-2">
+                  <img src="./assets/img/logo.svg" alt="SPREAD ONE logo" />
+                  <img src="./assets/img/logo_01.svg" alt class />
+                </a>
+                <div>
+                  <button class="float-right focus:outline-none" id="close">
+                    <i
+                      class="fas fa-times text-gray-800 text-xl items-center flex-shrink-0 fill-current"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+              <ul id="mobileNav" class="pt-6 pb-6">
+                <li>
+                  <a
+                    class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                    href="#"
+                    >自社サービス</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                    href="#"
+                    >受託開発</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                    href="#"
+                    >会社情報</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                    href="#"
+                    >プレスリリース</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block text-gray-800 text-center hiragino-w3 font-light text-base leading-6 hover:opacity-0.9 menu-link"
+                    href="#"
+                    >採用情報</a
+                  >
+                </li>
+                <li class="hidden md:block">
+                  <a
+                    class="flex px-8 py-3 items-center gap-10 rounded-lg bg-yellow-200 text-gray-800 text-center hiragino-w3 font-light text-base leading-6"
+                    href="#"
+                    >お問合せ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="relative">
+        <div
+          id="intro-moon"
+          class="fixed top-0 left-0 w-screen h-screen hidden sm:flex justify-center items-center z-[-1]"
+        >
+          <img
+            class="bg-center bg-no-repeat bg-cover aspect-square w-1/3 origin-top"
+            src="/assets/img/moon.png"
+            alt="moon"
+          />
+        </div>
+        <section id="intro" class="relative h-screen bg-white sm:bg-inherit">
+          <img
+            class="sm:hidden bg-center bg-no-repeat bg-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square w-[80%]"
+            src="/assets/img/moon-sm.png"
+            alt="moon"
+          />
+          <img
+            class="sm:hidden bg-center bg-no-repeat bg-cover absolute top-0 left-5 aspect-square h-[60vh]"
+            src="/assets/img/circle1-sm.png"
+            alt="moon"
+          />
+          <img
+            class="hidden sm:block bg-center bg-no-repeat bg-cover absolute top-0 left-0 h-full z-[-3]"
+            src="/assets/img/circle1.png"
+            alt="circle1"
+          />
+          <img
+            class="sm:hidden bg-center bg-no-repeat bg-cover absolute bottom-0 right-5 aspect-square h-[60vh]"
+            src="/assets/img/circle2-sm.png"
+            alt="moon"
+          />
+          <img
+            class="hidden sm:block bg-center bg-no-repeat bg-cover absolute bottom-0 right-0 h-full z-[-2]"
+            src="/assets/img/circle2.png"
+            alt="circle2"
+          />
+          <div
+            class="container mx-auto flex items-center justify-center h-full"
+          >
+            <h1
+              class="hiragino-w3 text-center text-[24px] md:text-[54px] leading-normal intro-ttl z-10"
+            >
+              スプレッドワンは、<br class="block md:hidden" /><span
+                class="bg-center bg-no-repeat bg-cover w-full"
+                >Web系の開発会社です。</span
+              ><br />
+              新しいユーザ体験を提供<br
+                class="block md:hidden"
+              />するシステムをゼロから<br />
+              デザインし開発すること<br
+                class="block md:hidden"
+              />を得意としています。
+            </h1>
+          </div>
+        </section>
+        <section
+          id="service"
+          class="relative h-screen bg-white sm:bg-inherit sm:mb-80"
+        >
+          <div
+            id="service-cloud1"
+            class="absolute top-0 left-0"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-anchor="#service"
+          >
+            <img
+              class="bg-center bg-no-repeat bg-cover h-2/3"
+              src="/assets/img/cloud1.png"
+              alt="cloud1"
+            />
+          </div>
+          <div
+            id="service-cloud2"
+            class="absolute bottom-0 right-0"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="500"
+            data-aos-anchor="#service"
+          >
+            <img
+              class="bg-center bg-no-repeat bg-cover h-full"
+              src="/assets/img/cloud2.png"
+              alt="cloud2"
+            />
+          </div>
+          <div
+            id="service-title"
+            class="container mx-auto flex items-center justify-center flex-col h-full"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-anchor="#service"
+          >
+            <div
+              id="service-title-inner"
+              data-aos="zoom-out-up"
+              data-aos-duration="1500"
+              data-aos-anchor="#service"
+            >
+              <h1
+                class="hiragino-w6 text-center text-[24px] md:text-[54px] leading-normal intro-ttl"
+              >
+                ユニークなサービスを<br
+                  class="block md:hidden"
+                />自らの手で創り出し、<br />
+                より良い世の中を創り出す。
+              </h1>
+              <p
+                class="hiragino-w3 text-center text-16px md:text-[24px] leading-normal mt-[80px]"
+              >
+                私たちは、オールマイティかつ高い<br
+                  class="block md:hidden"
+                />水準に技術力とデザイン力を維持し、<br />
+                時に一見突飛にみえるアイデアに対しても、<br
+                  class="block md:hidden"
+                />常識にとらわれず自ら考え判断し、<br />
+                ひとつのチームとして臆する<br
+                  class="block md:hidden"
+                />ことなくチャレンジします。
+              </p>
+            </div>
+          </div>
+        </section>
+        <div
+          class="sm:hidden flex flex-col items-center justify-center py-32 px-12 md:p-32 text-center"
+        >
+          <h3
+            class="hiragino-w3 text-left text-[35px] sm:text-[54px] leading-normal text-[#2A79BC]"
+          >
+            WebRTC
+          </h3>
+          <p
+            class="hiragino-w3 text-[20px] sm:text-4xl leading-normal mb-[34px] mt-[8px]"
+          >
+            を用いたビデオ通話・音声通話のアプリやWebサービスの開発に力を入れています
+          </p>
+          <a
+            href="#"
+            class="max-w-max flex px-[48px] py-4 justify-center items-center rounded-[40px] border border-black hiragino-w3 text-left text-[18px] sm:text-2xl leading-normal text-[#4F4F4F] hover:bg-[#222] hover:text-white cursor-pointer transition-all duration-500"
+          >
+            詳細を見る
+          </a>
+        </div>
+        <section id="self" class="relative bg-[#0d0d0d]">
+          <div
+            id="self-webrtc"
+            class="hidden sm:block absolute w-[80%] bg-white pt-[78px] pr-[192px] pb-[94px] pl-[72px] rounded-tl-[40px] rounded-bl-[40px]"
+          >
+            <h3
+              class="hiragino-w3 text-left text-[54px] leading-normal text-[#2A79BC]"
+            >
+              WebRTC
+            </h3>
+            <p
+              class="hiragino-w3 text-left text-4xl leading-normal mb-[34px] mt-[8px]"
+            >
+              を用いたビデオ通話・音声通話のアプリやWebサービスの開発に力を入れています
+            </p>
+            <a
+              href="#"
+              class="max-w-max flex px-[48px] py-4 justify-center items-center rounded-[40px] border border-black hiragino-w3 text-left text-2xl leading-normal text-[#4F4F4F] hover:bg-[#222] hover:text-white cursor-pointer transition-all duration-500"
+            >
+              詳細を見る
+            </a>
+          </div>
+          <div class="container mx-auto py-20">
+            <div>
+              <div
+                class="flex justify-center items-center"
+                data-aos="fade-up"
+                data-aos-anchor="#self"
+                data-aos-duration="500"
+                data-aos-offset="-200"
+              >
+                <h1
+                  class="hiragino-w3 text-[40px] sm:text-[50px] md:text-[80px] leading-normal text-white text-center py-10"
+                >
+                  自社サービス
+                </h1>
+              </div>
+              <div class="self-content flex flex-wrap justify-around">
+                <div
+                  class="self-item flex items-center md:items-start justify-start w-full md:w-[50%] xl:w-[25%] p-5"
+                >
+                  <div
+                    class="flex justify-start items-start title-anim-effect w-full cursor-pointer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="70"
+                      viewBox="0 0 10 70"
+                      fill="none"
+                      class="block md:hidden w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="240"
+                      viewBox="0 0 10 240"
+                      fill="none"
+                      class="hidden md:block w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                      <rect
+                        width="200"
+                        height="2"
+                        transform="matrix(0 1 1 0 0 40)"
+                        fill="url(#paint0_linear_136_462)"
+                        class="svg_rect hiddne md:block"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_136_462"
+                          x1="0"
+                          y1="0"
+                          x2="200"
+                          y2="0"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#F1FEC6" />
+                          <stop
+                            offset="1"
+                            stop-color="#F1FEC6"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div
+                      class="self-item-right ml-[10px] relative w-full flex before:content-[''] before:absolute before:top-0 before:-left-[17px] before:h-[35px] before:w-[2px] before:bg-[#F1FEC6] before:transition-all before:duration-500 before:delay-1000 before:z-10"
+                    >
+                      <div class="title z-10 delay-500">Deck</div>
+                      <div
+                        class="absolute left-0 top-[20px] transition-all duration-500 delay-1000 text-[16px] md:text-[12px] bg-[#202020] text-white opacity-0 z-0 content"
+                      >
+                        を用いたビデオ通話・音声通話のアプリやWebサービスの開発に力を入れています
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="self-item flex items-center md:items-end justify-start w-full md:w-[50%] xl:w-[25%] p-5"
+                >
+                  <div
+                    class="flex justify-start items-start title-anim-effect w-full cursor-pointer transition-all duration-1200"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="70"
+                      viewBox="0 0 10 70"
+                      fill="none"
+                      class="block md:hidden w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="240"
+                      viewBox="0 0 10 240"
+                      fill="none"
+                      class="hidden md:block w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                      <rect
+                        width="200"
+                        height="2"
+                        transform="matrix(0 1 1 0 0 40)"
+                        fill="url(#paint0_linear_136_462)"
+                        class="svg_rect"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_136_462"
+                          x1="0"
+                          y1="0"
+                          x2="200"
+                          y2="0"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#F1FEC6" />
+                          <stop
+                            offset="1"
+                            stop-color="#F1FEC6"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div
+                      class="self-item-right ml-[10px] relative w-full flex before:content-[''] before:absolute before:top-0 before:-left-[17px] before:h-[36px] before:w-[2px] before:bg-[#F1FEC6] before:transition-all before:duration-500 before:delay-1000 before:z-10"
+                    >
+                      <div class="title z-10 delay-500">Astro</div>
+                      <div
+                        class="absolute left-0 top-[20px] transition-all duration-500 delay-1000 text-[16px] md:text-[12px] bg-[#202020] text-white opacity-0 z-0 content"
+                      >
+                        を用いたビデオ通話・音声通話のアプリやWebサービスの開発に力を入れています
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="self-item flex items-center md:items-start justify-start w-full md:w-[50%] xl:w-[25%] p-5"
+                >
+                  <div
+                    class="flex justify-start items-start title-anim-effect w-full cursor-pointer transition-all duration-1200"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="70"
+                      viewBox="0 0 10 70"
+                      fill="none"
+                      class="block md:hidden w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="240"
+                      viewBox="0 0 10 240"
+                      fill="none"
+                      class="hidden md:block w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                      <rect
+                        width="200"
+                        height="2"
+                        transform="matrix(0 1 1 0 0 40)"
+                        fill="url(#paint0_linear_136_462)"
+                        class="svg_rect"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_136_462"
+                          x1="0"
+                          y1="0"
+                          x2="200"
+                          y2="0"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#F1FEC6" />
+                          <stop
+                            offset="1"
+                            stop-color="#F1FEC6"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div
+                      class="self-item-right ml-[10px] relative w-full flex before:content-[''] before:absolute before:top-0 before:-left-[17px] before:h-[36px] before:w-[2px] before:bg-[#F1FEC6] before:transition-all before:duration-1000 before:delay-1000 before:z-10"
+                    >
+                      <div class="title z-10 delay-500">Port</div>
+                      <div
+                        class="absolute left-0 top-[20px] transition-all duration-500 delay-1000 text-[16px] md:text-[12px] bg-[#202020] text-white opacity-0 z-0 content"
+                      >
+                        を用いたビデオ通話・音声通話のアプリやWebサービスの開発に力を入れています
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="self-item flex items-center md:items-end justify-start w-full md:w-[50%] xl:w-[25%] p-5"
+                >
+                  <div
+                    class="flex justify-start items-start title-anim-effect w-full cursor-pointer transition-all duration-1200"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="70"
+                      viewBox="0 0 10 70"
+                      fill="none"
+                      class="block md:hidden w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="240"
+                      viewBox="0 0 10 240"
+                      fill="none"
+                      class="hidden md:block w-[30px] transition-all duration-500"
+                    >
+                      <path
+                        d="M0 0L0 40H2L8 36.3636L8 0L0 0Z"
+                        fill="#F1FEC6"
+                        class="svg_body"
+                      />
+                      <rect
+                        width="200"
+                        height="2"
+                        transform="matrix(0 1 1 0 0 40)"
+                        fill="url(#paint0_linear_136_462)"
+                        class="svg_rect"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_136_462"
+                          x1="0"
+                          y1="0"
+                          x2="200"
+                          y2="0"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#F1FEC6" />
+                          <stop
+                            offset="1"
+                            stop-color="#F1FEC6"
+                            stop-opacity="0"
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div
+                      class="self-item-right ml-[10px] relative w-full flex before:content-[''] before:absolute before:top-0 before:-left-[17px] before:h-[36px] before:w-[2px] before:bg-[#F1FEC6] before:transition-all before:duration-1000 before:delay-1000 before:z-10"
+                    >
+                      <div class="title z-10 delay-500">Pocket AR</div>
+                      <div
+                        class="absolute left-0 top-[20px] transition-all duration-500 delay-1000 text-[16px] md:text-[12px] bg-[#202020] text-white opacity-0 z-0 content"
+                      >
+                        を用いたビデオ通話・音声通話のアプリやWebサービスの開発に力を入れています
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="news-layout p-3">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="200"
+                data-aos-anchor=".self-content"
+              >
+                <h1
+                  class="hiragino-w3 text-center text-[54px] leading-normal text-white mb-[40px]"
+                >
+                  ニュース
+                </h1>
+              </div>
+              <div class="news-content">
+                <div
+                  class="news-item py-[40px] flex items-start justify-start border-b border-white flex-wrap sm:flex-nowrap"
+                  data-aos="fade-up"
+                  data-aos-duration="200"
+                  data-aos-delay="200"
+                  data-aos-anchor=".self-content"
+                >
+                  <p
+                    class="date hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    2023.06.07
+                  </p>
+
+                  <p
+                    class="title sm:pl-[54px] hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    自分の周りの世界を３Dスキャン！Liderを用いたiOS向けスキャンアプリastro（アストロ）提供開始！
+                  </p>
+                </div>
+                <div
+                  class="news-item py-[40px] flex items-start justify-start border-b border-white flex-wrap sm:flex-nowrap"
+                  data-aos="fade-up"
+                  data-aos-duration="200"
+                  data-aos-delay="400"
+                  data-aos-anchor=".self-content"
+                >
+                  <p
+                    class="date hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    2022.10.25
+                  </p>
+
+                  <p
+                    class="title sm:pl-[54px] hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    画像と映像をアップするだけで簡単なARが作れる！シンプルなWeb
+                    ARの プラットフォーム「pocket AR（ポケット
+                    エーアール）」提供開始！
+                  </p>
+                </div>
+                <div
+                  class="news-item py-[40px] flex items-start justify-start border-b border-white flex-wrap sm:flex-nowrap"
+                  data-aos="fade-up"
+                  data-aos-duration="200"
+                  data-aos-delay="600"
+                  data-aos-anchor=".self-content"
+                >
+                  <p
+                    class="date hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    2022.09.01
+                  </p>
+
+                  <p
+                    class="title sm:pl-[54px] hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    弊社オフィスを移転いたしました。移転先については、アクセスよりご確認下さい。
+                  </p>
+                </div>
+                <div
+                  class="news-item py-[40px] flex items-start justify-start border-b border-white flex-wrap sm:flex-nowrap"
+                  data-aos="fade-up"
+                  data-aos-duration="200"
+                  data-aos-delay="800"
+                  data-aos-anchor=".self-content"
+                >
+                  <p
+                    class="date hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    2022.09.22
+                  </p>
+
+                  <p
+                    class="title sm:pl-[54px] hiragino-w3 text-left text-[24px] leading-normal text-white"
+                  >
+                    1対1の通話相手に課金が可能なビデオ通話サービス「Port」にて、応援ポイント(投げ銭)機能をリリースしました！
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center justify-end">
+                <a
+                  href="#"
+                  class="max-w-max hiragino-w3 flex text-right text-[24px] leading-normal text-white mt-[40px] pb-[3px] hover:border-b border-white"
+                >
+                  もっと見る
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.83317 15.1666H18.8648L13.1715 20.8599C12.7165 21.3149 12.7165 22.0616 13.1715 22.5166C13.6265 22.9716 14.3615 22.9716 14.8165 22.5166L22.5048 14.8282C22.9598 14.3732 22.9598 13.6382 22.5048 13.1832L14.8282 5.48325C14.3732 5.02825 13.6382 5.02825 13.1832 5.48325C12.7282 5.93825 12.7282 6.67325 13.1832 7.12825L18.8648 12.8332H5.83317C5.1915 12.8332 4.6665 13.3582 4.6665 13.9999C4.6665 14.6416 5.1915 15.1666 5.83317 15.1666Z"
+                      fill="#FAFBFD"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="pb-[200px] pt-[80px] bg-gradient-to-b from-yellow-200 to-blue-300"
+      >
+        <div class="container mx-auto p-5">
+          <p class="hiragino-w3 text-center text-[24px] leading-normal p-5">
+            お問合せから新たな繋がりが生まれ、さまざまな機会へと発展していくことを楽しみにしております。<br />
+            どうぞお気軽にお問合せ下さい。
+          </p>
+          <p
+            class="hiragino-w3 text-center text-[24px] leading-normal text-[#707070] mt-[8px] p-5"
+          >
+            ※求人、M&A、人材紹介に関するお問合せはご遠慮ください。
+          </p>
+          <a
+            href="contact/"
+            class="flex items-center justify-center w-full md:w-[504px] px-[48px] py-[16px] rounded-3xl bg-[#222] text-white hiragino-w3 text-[24px] text-center mx-auto mt-[80px] hover:bg-white hover:text-[#222]"
+          >
+            お問合せ
+          </a>
+          <div class="mt-[497px] mx-auto w-full">
+            <img
+              src="./assets/img/logo.svg"
+              alt
+              class="mx-auto mb-[40px] w-[60px] h-auto"
+            />
+          </div>
+          <a
+            href="#"
+            class="w-full flex items-center justify-center text-center text-[16px] leading-normal mb-[16px]"
+          >
+            プライバシーポリシー
+          </a>
+          <p class="text-center text-[16px] leading-normal">
+            copyright ©SPREAD ONE, Inc. all rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="./assets/js/common.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
